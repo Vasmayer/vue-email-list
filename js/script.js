@@ -12,11 +12,31 @@ Vue.config.devtools = true;
 var root = new Vue({
     el: '#root',
     data:{
-      listEmails:[1,2,3,4,5,6,7,8,9,10],
+      listEmails:[],
       numberEmails:10
     },
     methods:
     {
+      getEmails(numberEmails)
+      {
+        for(let i = 0; i < numberEmails;i++)
+        {
+          axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then( res => {
+             this.listEmails.push(res.data.response);
+          });
+        }
+      }
       
+    },
+    computed:
+    {
+        percentage()
+        {
+          return ( this.listEmails.length * 100 )/ this.numberEmails
+        }
+    },
+    mounted()
+    {
+      this.getEmails(this.numberEmails);
     } 
   });
