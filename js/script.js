@@ -22,7 +22,9 @@ var root = new Vue({
         for(let i = 0; i < numberEmails;i++)
         {
           axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then( res => {
-             this.listEmails.push(res.data.response);
+
+          if(!this.listEmails.includes(res.data.response)) this.listEmails.push(res.data.response);
+
           });
         }
       }
