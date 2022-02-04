@@ -1,0 +1,86 @@
+/* UTILITY */
+/* color */
+.bg-light-blue
+{
+    background-color: #8EDAFB;
+}
+.color-light-blue
+{
+    color: #8EDAFB;
+}
+/* borders */
+.blue-border-end
+{
+    border-right: 2px solid dodgerblue;
+}
+.top-bottom-borders
+{
+    border-top: lightgray 1px solid;
+    border-bottom: lightgray 1px solid;
+}
+/* MAIN */
+main
+{
+    background-image: linear-gradient(0deg, #DADBD3 80%, #009688 20%);
+    height: 100vh;
+}
+/* HEIGHT FIXED */
+.height-fixed
+{
+    height: 68vh;
+}
+/* MAIN CONTENT */
+main .container
+{
+    height: 90vh;
+}
+
+/* PROFILE */
+.profile{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+.profile-info
+{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.profile-image, .icon-notification
+{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.profile-info .profile-text
+{
+    padding-left: 10px;
+}
+/* ICONS */
+.icons
+{    cursor: pointer;
+}
+.chat
+{
+    background-image: url('../img/mine.jpg');
+}
+/* MESSAGES */
+.message
+{
+    border-radius: 10px;
+    padding: 10px 30px;
+}
+.message.sent
+{
+    background-color: #D5F9BA;
+    text-align: right;
+}
+.message.received
+{
+    background-color: white;
+    text-align: left;
+}
