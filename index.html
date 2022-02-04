@@ -13,7 +13,11 @@
 </head>
 <body>
     <div id="root">
-        
+        <main>
+            <ul v-if="listEmails.length === numberEmails" class="list-group text-center">
+                <li v-for="email in listEmails" class="list-group-item">{{email}}</li>
+            </ul>
+        </main>
        
     </div>  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> 

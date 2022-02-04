@@ -12,6 +12,8 @@ Vue.config.devtools = true;
 var root = new Vue({
     el: '#root',
     data:{
+      listEmails:[1,2,3,4,5,6,7,8,9,10],
+      numberEmails:10
     },
     methods:
     {
